@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+catboost_info/
+credit_risk_model.joblib
+catboost_submission.csv
+predicted_result_catboost.csv
