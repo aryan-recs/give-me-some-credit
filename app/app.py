@@ -1,14 +1,22 @@
 from pathlib import Path
 from typing import Optional
 import joblib
+import sys
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field, computed_field
+BASE_DIR = Path(__file__).parent.parent
+SRC_DIR = BASE_DIR / "src"
+
+sys.path.append(str(SRC_DIR))
 from feature_engineering import FeatureEngineer
 
 MODEL_PATH = (
-    Path(r"C:\Users\Administrator\Documents\GenAI\ML_Projects\Credit\credit_risk_model.joblib").parent / "credit_risk_model.joblib")
+    BASE_DIR
+    / "model"
+    / "credit_risk_model.joblib"
+)
 
 try:
     model = joblib.load(MODEL_PATH)

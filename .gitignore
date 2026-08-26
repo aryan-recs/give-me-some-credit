@@ -1,6 +1,27 @@
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
 .ipynb_checkpoints/
+
+# CatBoost training artifacts
 catboost_info/
-credit_risk_model.joblib
-catboost_submission.csv
-predicted_result_catboost.csv
+
+# Data
+data/raw/
+data/processed/
+
+# Environment
+.env
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
