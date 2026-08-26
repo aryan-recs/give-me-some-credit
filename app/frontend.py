@@ -27,7 +27,8 @@ with st.form("credit_form"):
             "Monthly Income",
             min_value=0.0,
             value=5000.0,
-            step=100.0
+            step=100.0,
+            help="Enter monthly income in USD ($)"
         )
 
         income_unknown = st.checkbox(
@@ -38,7 +39,8 @@ with st.form("credit_form"):
             "Debt Ratio",
             min_value=0.0,
             value=0.3,
-            step=0.01
+            step=0.01,
+            help="Ratio of monthly debt payments to gross monthly income"
         )
 
         revolving_utilization = st.number_input(
