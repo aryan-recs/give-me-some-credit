@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "http://127.0.0.1:8000"
 st.set_page_config(
     page_title="Credit Risk Predictor",
     page_icon="💳",
@@ -114,7 +114,7 @@ if submitted:
     }
     try:
         with st.spinner("Predicting risk..."):
-            response = requests.post(API_URL,json=payload)
+            response = requests.post(f"{API_URL}/predict", json=payload, timeout=10)
             
         response.raise_for_status()
         result = response.json()

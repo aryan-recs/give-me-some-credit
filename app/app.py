@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field, computed_field
+
+
 BASE_DIR = Path(__file__).parent.parent
 SRC_DIR = BASE_DIR / "src"
 
